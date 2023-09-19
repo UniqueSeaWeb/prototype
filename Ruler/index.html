@@ -53,39 +53,77 @@
         }
 
         .valueArea>li:not(:first-child) {
-            margin-top: 24px;
+            margin-top: 48px;
         }
 
-        .value {
+        .valueLabel {
             font-size: 16px;
             font-weight: 700;
             line-height: 24px;
             color: #2E2E2E;
         }
 
+        .valuePixel {
+            display: flex;
+            align-items: baseline;
+            padding-top: 8px;
+        }
+
         .valueNum {
+            flex-grow: 1;
             font-size: 32px;
-            line-height: 52px;
+            font-weight: 700;
+            line-height: 40px;
+            color: #2E2E2E;
+            text-align: right;
+        }
+
+        .valueUnit {
+            margin-left: 4px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 24px;
+            color: #2E2E2E;
         }
 
         @media (min-width: 768px) {
+            .valueArea {
+                display: flex;
+            }
+
             .valueArea>li {
+                flex-grow: 1;
                 padding: 24px 48px;
                 border-radius: 24px;
             }
 
-            .valueArea>li:not(:first-child) {
-                margin-top: 48px;
+            .valueArea>li:first-child {
+                margin-right: 24px;
             }
 
-            .value {
+            .valueArea>li:not(:first-child) {
+                margin-top: 0;
+                margin-left: 24px;
+            }
+
+            .valueLabel {
                 font-size: 24px;
                 line-height: 32px;
             }
 
+            .valuePixel {
+                padding-top: 16px;
+            }
+
             .valueNum {
                 font-size: 44px;
-                line-height: 56px;
+                line-height: 52px;
+            }
+
+            .valueUnit {
+                margin-left: 8px;
+                font-size: 24px;
+                line-height: 32px;
             }
         }
 
@@ -163,12 +201,12 @@
         }
 
         .horizontal .scaleValue {
-            top: 20px;
-            right: 2px;
+            right: 0;
+            bottom: -14px;
         }
 
         .vertical .scaleValue {
-            bottom: 0px;
+            bottom: 0;
             left: 24px;
         }
     </style>
@@ -179,12 +217,18 @@
         <!-- 画面サイズ表示エリア -->
         <ul class="valueArea">
             <li>
-                <p class="value">横幅</p>
-                <p class="value"><span id="widthValue" class="valueNum"></span> px</p>
+                <p class="valueLabel">横幅</p>
+                <div class="valuePixel">
+                    <p id="widthValue" class="valueNum"></p>
+                    <p class="valueUnit">px</p>
+                </div>
             </li>
             <li>
-                <p class="value">縦幅</p>
-                <p class="value"><span id="heightValue" class="valueNum"></span> px</p>
+                <p class="valueLabel">縦幅</p>
+                <div class="valuePixel">
+                    <p id="heightValue" class="valueNum"></p>
+                    <p class="valueUnit">px</p>
+                </div>
             </li>
         </ul>
 
