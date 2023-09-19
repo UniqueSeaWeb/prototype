@@ -42,17 +42,18 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-30%, -50%);
-            display: flex;
-            flex-direction: column;
-            padding: 16px;
+            transform: translate(-50%, -50%);
+        }
+
+        .valueArea>li {
+            padding: 16px 36px;
             border-radius: 16px;
             background-color: #FFFFFF;
             box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
         }
 
-        .valueArea>li {
-            flex-grow: 1;
+        .valueArea>li:not(:first-child) {
+            margin-top: 24px;
         }
 
         .value {
@@ -68,10 +69,13 @@
         }
 
         @media (min-width: 768px) {
-            .valueArea {
-                transform: translateX(-50%, -50%);
-                padding: 24px;
+            .valueArea>li {
+                padding: 24px 48px;
                 border-radius: 24px;
+            }
+
+            .valueArea>li:not(:first-child) {
+                margin-top: 48px;
             }
 
             .value {
@@ -151,10 +155,12 @@
         <!-- 画面サイズ表示エリア -->
         <ul class="valueArea">
             <li>
-                <p class="value">横幅: <span id="widthValue" class="valueNum">390</span> px</p>
+                <p class="value">横幅</p>
+                <p class="value"><span id="widthValue" class="valueNum"></span> px</p>
             </li>
             <li>
-                <p class="value">縦幅: <span id="heightValue" class="valueNum">663</span> px</p>
+                <p class="value">縦幅</p>
+                <p class="value"><span id="heightValue" class="valueNum"></span> px</p>
             </li>
         </ul>
 
