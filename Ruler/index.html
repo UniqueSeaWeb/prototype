@@ -82,7 +82,7 @@
                 font-size: 24px;
                 line-height: 32px;
             }
-    
+
             .valueNum {
                 font-size: 44px;
                 line-height: 56px;
@@ -139,13 +139,37 @@
             width: 20px;
         }
 
-        .vertical>.scale10, .vertical>.scale50 {
+        .vertical>.scale10,
+        .vertical>.scale50 {
             height: 10px;
             border-bottom: 1px solid #2E2E2E;
         }
 
         .vertical>.scale10 {
             width: 10px;
+        }
+
+        .scaleValueWrapper {
+            position: relative;
+        }
+
+        .scaleValue {
+            position: absolute;
+            display: flex;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 14px;
+            color: #2E2E2E;
+        }
+
+        .horizontal .scaleValue {
+            top: 20px;
+            right: 2px;
+        }
+
+        .vertical .scaleValue {
+            bottom: 0px;
+            left: 24px;
         }
     </style>
 </head>
@@ -170,6 +194,7 @@
     </main>
 
     <script>
+        /* 画面サイズの数値を表示する処理 */
         function showSize() {
             // 要素を取得
             const widthValueElem = document.getElementById('widthValue');
@@ -185,6 +210,7 @@
         window.addEventListener('load', showSize);
         window.addEventListener('resize', showSize);
 
+        /* 画面読み込み時に定規を表示する処理 */
         function setRuler() {
             // 値を取得
             let widthValue = document.documentElement.clientWidth;
@@ -196,7 +222,11 @@
             for (let w = 0; w < Math.floor(widthValue / 10); w++) {
                 if (w % 5 == 4) {
                     let scale = document.createElement('div');
-                    scale.classList.add('scale50');
+                    scale.classList.add('scale50', 'scaleValueWrapper');
+                    let scaleValue = document.createElement('p');
+                    scaleValue.classList.add('scaleValue');
+                    scaleValue.innerText = (w + 1) * 10;
+                    scale.appendChild(scaleValue);
                     horizontalElem.appendChild(scale);
                 } else {
                     if (w == 0) {
@@ -224,7 +254,11 @@
                 } else {
                     let scale = document.createElement('div');
                     if (h % 5 == 4) {
-                        scale.classList.add('scale50');
+                        scale.classList.add('scale50', 'scaleValueWrapper');
+                        let scaleValue = document.createElement('p');
+                        scaleValue.classList.add('scaleValue');
+                        scaleValue.innerText = (h + 1) * 10;
+                        scale.appendChild(scaleValue);
                     } else {
                         scale.classList.add('scale10');
                     }
@@ -235,6 +269,7 @@
 
         window.addEventListener('load', setRuler);
 
+        /* 画面リサイズ時に定規を再表示する処理 */
         function resetRuler() {
             // 横縦定規の要素を取得
             const horizontalElem = document.getElementsByClassName('horizontal')[0];
