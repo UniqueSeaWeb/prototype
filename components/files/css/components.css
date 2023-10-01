@@ -166,8 +166,9 @@
 /* コンポーネント：card */
 .c_card {
     display: block;
-    width: 165px;
+    width: 164px;
     padding: 16px;
+    border: 1px solid #D9D9D9;
     border-radius: 16px;
     background-color: #FFFFFF;
     box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.4);
@@ -182,6 +183,18 @@
 
 .c_card_img>img {
     width: 100%;
+}
+
+@media (min-width: 760px) {
+    .c_card {
+        width: 224px;
+        padding: 24px;
+        border-radius: 24px;
+    }
+    
+    .c_card_img {
+        height: 160px;
+    }
 }
 
 /* コンポーネント：menu */

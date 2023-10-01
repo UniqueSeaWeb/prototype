@@ -27,6 +27,7 @@ header {
 main {
     padding: 36px 0;
 }
+
 .h_cardSection {
     padding: 0 20px;
 }
@@ -35,6 +36,7 @@ main {
     .h_cardSection {
         width: 100%;
         max-width: 800px;
+        margin: 0 auto;
         padding: 0;
     }
 }
@@ -61,4 +63,22 @@ main {
 
 .h_cardTitle {
     padding-top: 8px;
+}
+
+@media (min-width: 760px) {
+    .h_cardList>li:nth-child(even) {
+        margin-left: 0;
+    }
+
+    .h_cardList>li:not(:first-child):not(:nth-child(2)) {
+        margin-top: 0;
+    }
+
+    .h_cardList>li:not(:nth-child(3n+1)) {
+        margin-left: 48px;
+    }
+
+    .h_cardList>li:not(:first-child):not(:nth-child(2)):not(:nth-child(3)) {
+        margin-top: 36px;
+    }
 }
