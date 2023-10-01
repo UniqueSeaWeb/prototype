@@ -2,3 +2,25 @@
 .sizeSection, .positionSection, .colorSection {
     padding: 0 20px;
 }
+
+.positionSection, .colorSection {
+    padding-top: 20px;
+}
+
+.codeSection {
+    position: relative;
+    margin-top: 20px;
+    padding: 20px;
+    color: #FFFFFF;
+    background-color: #000000;
+}
+
+.copyBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    border: 1px solid #585858;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+}
