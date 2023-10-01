@@ -1,0 +1,11 @@
+/* アイコン移動 */
+#c_moveIcon {
+    position: relative;
+    height: 100%;
+}
+
+#c_moveIcon_icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+}

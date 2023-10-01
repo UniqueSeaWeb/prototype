@@ -1,0 +1,50 @@
+/* プログレスバー */
+.c_progressBar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.c_progressBar_circle {
+    border-radius: 50%;
+    background-color: #FABF00;
+}
+
+.c_progressBar_big {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+}
+
+.c_progressBar_small {
+    width: 16px;
+    height: 16px;
+}
+
+.c_progressBar_bar {
+    width: calc((100% - 24px * 3 - 16px * 6) / 8);
+    height: 4px;
+    background-color: #FABF00;
+}
+
+.c_progressBar_typo_number {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #2E2E2E;
+}
+
+.c_progressBar_active {
+    background-color: #FABF00;
+}
+
+.c_progressBar_active~.c_progressBar_bar {
+    background-color: #F0F0F0;
+}
+
+.c_progressBar_active~.c_progressBar_bar+.c_progressBar_circle {
+    background-color: #D5D5D5;
+}

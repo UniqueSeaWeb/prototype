@@ -1,0 +1,12 @@
+/* サンプル（共通） */
+body {
+    background-color: #EFFFFF;
+}
+
+main {
+    padding: 20px 0;
+}
+
+.sizeSection, .positionSection, .colorSection {
+    padding: 0 20px;
+}

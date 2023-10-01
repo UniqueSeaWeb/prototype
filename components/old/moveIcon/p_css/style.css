@@ -1,0 +1,12 @@
+/* 画面用 */
+main {
+    width: 100vw;
+    height: 100vh;
+    padding: 32px 20px;
+}
+
+#c_moveIcon_icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+}

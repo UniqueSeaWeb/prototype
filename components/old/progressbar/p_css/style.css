@@ -1,0 +1,14 @@
+/* 画面用 */
+main {
+    width: 100vw;
+    height: 100vh;
+    padding: 32px 20px;
+}
+
+.c_progressBar:not(:first-child) {
+    margin-top: 24px;
+}
+
+.c_progressBar:last-child {
+    margin-top: 64px;
+}

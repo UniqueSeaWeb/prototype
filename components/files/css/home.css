@@ -1,0 +1,64 @@
+body {
+    background-image: url("../image/lightLines_sp.jpg");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: repeat-y;
+}
+
+@media (min-width: 760px) {
+    body {
+        background-image: url("../image/lightLines_pc.jpg");
+    }
+}
+
+/* ヘッダー */
+header {
+    padding: 16px 20px;
+}
+
+@media (min-width: 760px) {
+    .header_titleArea {
+        width: 100%;
+        max-width: 800px;
+    }
+}
+
+/* メイン */
+main {
+    padding: 36px 0;
+}
+.h_cardSection {
+    padding: 0 20px;
+}
+
+@media (min-width: 760px) {
+    .h_cardSection {
+        width: 100%;
+        max-width: 800px;
+        padding: 0;
+    }
+}
+
+.h_cardList {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.h_cardList>li:nth-child(even) {
+    margin-left: 20px;
+}
+
+.h_cardList>li:not(:first-child):not(:nth-child(2)) {
+    margin-top: 20px;
+}
+
+.h_underBarWrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 8px;
+}
+
+.h_cardTitle {
+    padding-top: 8px;
+}
