@@ -1,4 +1,8 @@
 /* サンプル（Typography） */
+body {
+    background-color: #EFFFFF;
+}
+
 .sizeSection, .positionSection, .colorSection {
     padding: 0 20px;
 }
