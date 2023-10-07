@@ -333,6 +333,7 @@
 }
 
 .c_textField01:has(.c_textField01_inputWrapper>input:not(:placeholder-shown))>p {
+    width: 100%;
     font-size: 14px;
     font-weight: 700;
     color: #2E2E2E;
@@ -344,3 +345,29 @@
         font-size: 16px;
     }
 }
+
+.c_textField02 {
+    border: 1px solid #2E2E2E;
+}
+
+.c_textField02 input {
+    width: 100%;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: #EAF6FF;
+    outline: none;
+    cursor: pointer;
+}
+
+.c_textField02 input:placeholder-shown {
+    background-color: yellow;
+}
+
+.c_textField02 input:focus {
+    background-color: orange;
+}
+
+.c_textField02 input:not(:placeholder-shown) {
+    background-color: red;
+}
+
