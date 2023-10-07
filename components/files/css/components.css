@@ -304,7 +304,7 @@
     left: 16px;
     width: calc(100% - 16px * 2);
     pointer-events: none;
-    transition: all ease-in 0.2s;
+    transition: all ease 0.2s;
 }
 
 .c_textField01:has(input:focus)>p {
@@ -315,7 +315,7 @@
     line-height: 20px;
     font-weight: 700;
     color: #2E2E2E;
-    transition: all ease-in 0.2s;
+    transition: all ease 0.2s;
 }
 
 .c_textField01:has(input:not(:placeholder-shown))>p {
@@ -326,6 +326,7 @@
     line-height: 20px;
     font-weight: 700;
     color: #2E2E2E;
+    transition: all ease 0.2s;
 }
 
 .c_textField01>input {
