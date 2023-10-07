@@ -292,24 +292,54 @@
 }
 
 /* コンポーネント：TextField01 */
+.c_textField01 {
+    position: relative;
+    width: 100%;
+    padding-top: 28px;
+}
+
 .c_textField01>p {
-    width: calc(100% - 32px);
-    transform: translate(16px, 48px);
+    position: absolute;
+    top: 44px;
+    left: 16px;
+    width: calc(100% - 16px * 2);
     pointer-events: none;
     transition: all ease-in 0.2s;
 }
 
-.c_textField01_inputWrapper {
-    padding-top: 8px;
+.c_textField01:has(input:focus)>p {
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #2E2E2E;
+    transition: all ease-in 0.2s;
 }
 
-.c_textField01 input {
+.c_textField01:has(input:not(:placeholder-shown))>p {
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #2E2E2E;
+}
+
+.c_textField01>input {
     width: 100%;
     padding: 16px;
     border-radius: 16px;
     background-color: #EAF6FF;
     outline: none;
     cursor: pointer;
+}
+
+.c_textField01>input:focus {
+    padding: 15px;
+    border: 1px solid #00AFCC;
 }
 
 .c_textField01_inputText {
@@ -318,56 +348,3 @@
     line-height: 24px;
     color: #2E2E2E;
 }
-
-.c_textField01 input:focus {
-    padding: 15px;
-    border: 1px solid #00AFCC;
-}
-
-.c_textField01:has(.c_textField01_inputWrapper>input:focus)>p {
-    font-size: 14px;
-    font-weight: 700;
-    color: #2E2E2E;
-    transform: translate(0, 0);
-    transition: all ease-in 0.2s;
-}
-
-.c_textField01:has(.c_textField01_inputWrapper>input:not(:placeholder-shown))>p {
-    width: 100%;
-    font-size: 14px;
-    font-weight: 700;
-    color: #2E2E2E;
-    transform: translate(0, 0);
-}
-
-@media (min-width: 760px) {
-    .c_textField01:has(.c_textField01_inputWrapper>input:not(:placeholder-shown))>p {
-        font-size: 16px;
-    }
-}
-
-.c_textField02 {
-    border: 1px solid #2E2E2E;
-}
-
-.c_textField02 input {
-    width: 100%;
-    padding: 16px;
-    border-radius: 16px;
-    background-color: #EAF6FF;
-    outline: none;
-    cursor: pointer;
-}
-
-.c_textField02 input:placeholder-shown {
-    background-color: yellow;
-}
-
-.c_textField02 input:focus {
-    background-color: orange;
-}
-
-.c_textField02 input:not(:placeholder-shown) {
-    background-color: red;
-}
-
