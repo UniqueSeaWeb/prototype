@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Counter</title>
+    <link rel="stylesheet" href="../../files/css/reset.css">
+    <link rel="stylesheet" href="../../files/css/components.css">
+    <link rel="stylesheet" href="../sample_files/sample_css/sample_common.css">
+    <link rel="stylesheet" href="../sample_files/sample_css/sample_counter.css">
+</head>
+
+<body>
+    <main>
+        <section>
+            <!-- カウンター -->
+            <div>
+                <h2 class="c_typo_bodyL c_typo_BLK01">Counter</h2>
+                <div class="counter">
+                    <p class="c_typo_headerM c_typo_BLK01 c_typo_center">00:00</p>
+                </div>
+            </div>
+
+            <!-- ストップウォッチ -->
+            <div class="box">
+                <h2 class="c_typo_bodyL c_typo_BLK01">Stop Watch</h2>
+                <div class="counter">
+                    <p id="c_counter_time" class="c_typo_headerM c_typo_BLK01 c_typo_center">00:00</p>
+                </div>
+                <div class="buttonArea">
+                    <button id="c_counter_startBtn">Start</button>
+                    <button id="c_counter_clearBtn">Clear</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="../../files/css/events.js"></script>
+</body>
+
+</html>

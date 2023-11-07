@@ -1,0 +1,32 @@
+/* サンプル（Counter） */
+section {
+    padding: 0 20px;
+}
+
+.box {
+    padding-top: 24px;
+}
+
+.counter {
+    width: 40%;
+    margin-top: 8px;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: #EAF6FF;
+}
+
+.buttonArea {
+    display: flex;
+    padding-top: 8px;
+}
+
+.buttonArea>button:last-child {
+    margin-left: 20px;
+}
+
+button {
+    width: 160px;
+    padding: 16px 20px;
+    border: 1px solid #2E2E2E;
+    border-radius: 16px;
+}

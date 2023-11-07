@@ -13,3 +13,14 @@ if (document.getElementsByClassName('c_menu')) {
         });
     }
 }
+
+/* コンポーネント：Counter */
+if (document.getElementById('c_counter_time')) {
+    const counter = document.getElementById('c_counter_time');
+    const startBtn = document.getElementById('c_counter_startBtn');
+    const clearBtn = document.getElementById('c_counter_clearBtn');
+    let time = 0;
+    setInterval(function () {
+        counter.innerText = 
+    }, 1000);
+}
