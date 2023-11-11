@@ -1,0 +1,18 @@
+/* サンプル（Button） */
+section {
+    padding: 0 20px;
+}
+
+section:not(:first-child) {
+    padding-top: 24px;
+}
+
+.uploadArea {
+    padding: 16px 20px 0;
+}
+
+.uploadImg {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
