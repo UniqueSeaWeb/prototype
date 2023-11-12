@@ -20,7 +20,7 @@ if (document.getElementById('c_counter_time')) {
     const startBtn = document.getElementById('c_counter_startBtn');
     const clearBtn = document.getElementById('c_counter_clearBtn');
     let time = 0;
-    setInterval(function () {
-        counter.innerText = 
-    }, 1000);
+    // setInterval(function () {
+    //     counter.innerText = 
+    // }, 1000);
 }

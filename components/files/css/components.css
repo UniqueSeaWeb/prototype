@@ -352,6 +352,7 @@
 
 /* コンポーネント：c_button */
 .c_button {
+    display: block;
     width: 100%;
     padding: 16px 0;
     border-radius: 24px;
@@ -379,6 +380,15 @@
         color: #0068b7;
         transition: all 0.2s;
     }
+}
+
+.c_button:disabled {
+    background-color: #D9D9D9;
+    pointer-events: none;
+}
+
+.c_button:disabled>p {
+    color: #585858;
 }
 
 /* コンポーネント：c_button02 */
