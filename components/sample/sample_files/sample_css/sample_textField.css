@@ -3,6 +3,10 @@ section {
     padding: 0 20px;
 }
 
-.textField02Sec {
-    padding-top: 24px;
+section:not(:first-child) {
+    margin-top: 40px;
+}
+
+.pt_textFieldWrapper {
+    padding-top: 8px;
 }

@@ -332,14 +332,13 @@
 .c_textField01>input {
     width: 100%;
     padding: 16px;
+    border: 1px solid #EAF6FF;
     border-radius: 16px;
     background-color: #EAF6FF;
     outline: none;
-    cursor: pointer;
 }
 
 .c_textField01>input:focus {
-    padding: 15px;
     border: 1px solid #00AFCC;
 }
 
@@ -348,6 +347,24 @@
     font-weight: 400;
     line-height: 24px;
     color: #2E2E2E;
+}
+
+/* コンポーネント：TextField01 */
+.c_textField02 {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #EAF6FF;
+    border-radius: 16px;
+    outline: none;
+    background-color: #EAF6FF;
+}
+
+.c_textField02::placeholder {
+    color: #585858;
+}
+
+.c_textField02:focus {
+    border: 1px solid #00AFCC;
 }
 
 /* コンポーネント：button */
