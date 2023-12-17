@@ -24,3 +24,25 @@ if (document.getElementById('c_counter_time')) {
     //     counter.innerText = 
     // }, 1000);
 }
+
+/* コンポーネント：Navigation */
+if (document.getElementsByClassName('c_nav')) {
+    // ナビゲーションが存在する場合
+    // ナビゲーションの要素を取得
+    const nav = document.getElementsByClassName('c_nav');
+
+    for (let i = 0; i < nav.length; i++) {
+        // バーエリア押下時の処理
+        nav[i].getElementsByClassName('c_nav_barArea')[0].addEventListener('click', function () {
+            if (this.parentElement.classList.contains('c_nav_open')) {
+                // 既に開いている場合
+                // バーエリアを閉じる
+                this.parentElement.classList.remove('c_nav_open');
+            } else {
+                // 閉じている場合
+                // バーエリアを開く
+                this.parentElement.classList.add('c_nav_open');
+            }
+        });
+    }
+}
