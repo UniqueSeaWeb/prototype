@@ -524,3 +524,41 @@
         transform: translateX(calc(-100vw / 4));
     }
 }
+
+/* コンポーネント：Carousel */
+.c_carousel_contentsList {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.c_carousel_contentsList>li {
+    flex-shrink: 0;
+    width: 100%;
+    padding: 24px;
+    scroll-snap-align: center;
+}
+
+.c_carousel_dotList {
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+}
+
+.c_carousel_dotList>li:not(:first-child) {
+    padding-left: 8px;
+}
+
+.c_carousel_dot {
+    width: 8px;
+    height: 8px;
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+.c_carousel_selected>.c_carousel_dot {
+    background-color: #D9D9D9;
+}
+
