@@ -382,23 +382,23 @@
 .c_button {
     display: block;
     width: 100%;
-    padding: 16px 0;
-    border-radius: 24px;
+    padding: 13px 0;
+    border: 3px solid #0068b7;
+    border-radius: 28px;
     background-color: #0068b7;
     outline: none;
     transition: all 0.2s;
 }
 
 .c_button:focus {
-    padding: 13px 0;
     border: 3px solid #00AFCC;
     transition: all 0.2s;
 }
 
 @media (min-width: 760px) {
     .c_button:hover {
-        padding: 13px 0;
         border: 3px solid #0068b7;
+        border-radius: 29px;
         background-color: #EAF6FF;
         cursor: pointer;
         transition: all 0.2s;

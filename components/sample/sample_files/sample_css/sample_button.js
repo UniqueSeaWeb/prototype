@@ -25,8 +25,3 @@ document.getElementById('c_button02_input').addEventListener('change', function 
         reader.readAsDataURL(data);
     }
 });
-
-const releaseMemoryLeaksBtn = document.getElementById('releaseMemoryLeaksBtn');
-releaseMemoryLeaksBtn.addEventListener('click', function () {
-    URL.revokeObjectURL();
-});
