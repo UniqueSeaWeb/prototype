@@ -1,0 +1,8 @@
+/* サンプル（Dialog） */
+section {
+    padding: 0 20px;
+}
+
+section:not(:first-child) {
+    padding-top: 24px;
+}

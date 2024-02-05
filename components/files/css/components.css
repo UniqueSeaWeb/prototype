@@ -183,6 +183,18 @@
     color: #EAF6FF;
 }
 
+.c_typo_RED01 {
+    color: #640808;
+}
+
+.c_typo_RED02 {
+    color: #C43434;
+}
+
+.c_typo_RED03 {
+    color: #E09A9A;
+}
+
 .c_typo_center {
     text-align: center;
 }
@@ -573,3 +585,32 @@
     background-color: #D9D9D9;
 }
 
+/* コンポーネント：Notification */
+.c_notification01 {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background-color: #E09A9A;
+}
+
+.c_notification01>svg {
+    flex-shrink: 0;
+}
+
+.c_notification01_text {
+    flex-grow: 1;
+    padding-left: 8px;
+}
+
+/* コンポーネント：Dialog */
+.c_dialog_contents {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    /* background-color: rgba(0, 0, 0, 0.01); */
+    background-color: rgba(0, 0, 0, 0.8);
+}
