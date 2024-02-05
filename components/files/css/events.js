@@ -9,6 +9,19 @@ if (document.getElementById('c_counter_time')) {
     // }, 1000);
 }
 
+/* コンポーネント：button */
+window.addEventListener('DOMContentLoaded', function () {
+    if (document.getElementsByClassName('c_button')) {
+        // ボタンが非活性の場合、タブ操作を無効化
+        const btn = document.getElementsByClassName('c_button');
+        for (let i = 0; i < btn.length; i++) {
+            if (btn[i].classList.contains('c_button_disabled')) {
+                btn[i].tabIndex = -1;
+            }
+        }
+    }
+});
+
 /* コンポーネント：Navigation */
 if (document.getElementsByClassName('c_nav')) {
     // ナビゲーションが存在する場合
@@ -68,4 +81,57 @@ if (document.getElementsByClassName('c_dialog')) {
             }
         });
     }
+}
+
+// 全角英数字を半角に変換する関数
+function convertZenkakuIntoHankaku(str) {
+    str = str.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function (s) {
+        return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+    });
+    return str;
+}
+
+// 半角英数字を全角に変換する関数
+function convertHankakuIntoZenkaku(str) {
+    str = str.replace(/[A-Za-z0-9]/g, function (s) {
+        return String.fromCharCode(s.charCodeAt(0) + 0xFEE0);
+    });
+    return str;
+}
+
+// 任意の要素まで0.6秒かけてスクロールするアニメーション関数
+function scrollToElement(element) {
+    // 要素の位置を取得
+    var targetY = element.getBoundingClientRect().top + window.pageYOffset;
+
+    // アニメーション開始時間
+    var startTime = Date.now();
+
+    // アニメーションループ
+    function animationLoop() {
+        // 経過時間
+        var elapsedTime = Date.now() - startTime;
+
+        // スクロール位置を計算
+        var scrollY = easeInOutCubic(elapsedTime, window.pageYOffset, targetY - window.pageYOffset, 600);
+
+        // スクロール
+        window.scrollTo(0, scrollY);
+
+        // アニメーションが終了していない場合はループを継続
+        if (elapsedTime < 600) {
+            requestAnimationFrame(animationLoop);
+        }
+    };
+
+    // アニメーション開始
+    requestAnimationFrame(animationLoop);
+}
+
+// easing関数
+function easeInOutCubic(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t * t + b;
+    t -= 2;
+    return c / 2 * (t * t * t + 2) + b;
 }

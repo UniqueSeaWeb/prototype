@@ -330,17 +330,6 @@
     transition: all ease 0.6s;
 }
 
-.c_textField01:has(input:focus)>p {
-    top: 0;
-    left: 0;
-    width: 100%;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 700;
-    color: #2E2E2E;
-    transition: all ease 0.6s;
-}
-
 .c_textField01:has(input:not(:placeholder-shown))>p {
     top: 0;
     left: 0;
@@ -361,15 +350,28 @@
     outline: none;
 }
 
-.c_textField01>input:focus {
-    border: 1px solid #00AFCC;
-}
-
 .c_textField01_inputText {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     color: #2E2E2E;
+}
+
+@media (min-width: 760px) {
+    .c_textField01:has(input:focus)>p {
+        top: 0;
+        left: 0;
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 700;
+        color: #2E2E2E;
+        transition: all ease 0.6s;
+    }
+
+    .c_textField01>input:focus {
+        border: 1px solid #00AFCC;
+    }
 }
 
 /* コンポーネント：TextField01 */
@@ -386,8 +388,10 @@
     color: #585858;
 }
 
-.c_textField02:focus {
-    border: 1px solid #00AFCC;
+@media (min-width: 760px) {
+    .c_textField02:focus {
+        border: 1px solid #00AFCC;
+    }
 }
 
 /* コンポーネント：button */
@@ -402,12 +406,12 @@
     transition: all 0.2s;
 }
 
-.c_button:focus {
-    border: 3px solid #00AFCC;
-    transition: all 0.2s;
-}
-
 @media (min-width: 760px) {
+    .c_button:focus {
+        border: 3px solid #00AFCC;
+        transition: all 0.2s;
+    }
+
     .c_button:hover {
         border: 3px solid #0068b7;
         border-radius: 29px;
@@ -422,12 +426,13 @@
     }
 }
 
-.c_button:disabled {
+.c_button_disabled {
+    border-color: #D9D9D9;
     background-color: #D9D9D9;
     pointer-events: none;
 }
 
-.c_button:disabled>p {
+.c_button_disabled>p {
     color: #585858;
 }
 
@@ -591,7 +596,7 @@
     align-items: center;
     padding: 8px 16px;
     border-radius: 20px;
-    background-color: #E09A9A;
+    background-color: #FFDDDD;
 }
 
 .c_notification01>svg {
@@ -613,4 +618,15 @@
     height: 100dvh;
     /* background-color: rgba(0, 0, 0, 0.01); */
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* コンポーネント：Notes */
+.c_notes {
+    display: flex;
+    align-items: flex-start;
+}
+
+.c_notes_right {
+    flex-grow: 1;
+    padding-left: 4px;
 }
