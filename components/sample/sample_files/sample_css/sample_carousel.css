@@ -1,4 +1,49 @@
 /* サンプル（Carousel） */
-.pt_crs_sampleImg {
-    width: 100%;
+.sp_carouselSec {
+    background-color: gray;
+}
+
+.sp_carouselSecInner {
+    padding: 48px 20px;
+}
+
+@media (min-width: 760px) {
+    .sp_carouselSec {
+        padding: 64px 32px;
+    }
+
+    .sp_carouselSecInner {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+.sp_content1,
+.sp_content2,
+.sp_content3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 120px;
+}
+
+.sp_content1 {
+    /* width: 200px;
+    height: 360px; */
+    background-color: red;
+}
+
+.sp_content2 {
+    /* width: 300px;
+    height: 400px; */
+    background-color: orange;
+}
+
+.sp_content3 {
+    /* width: 280px;
+    height: 200px; */
+    background-color: yellow;
 }

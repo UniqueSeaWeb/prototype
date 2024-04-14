@@ -168,7 +168,7 @@
 }
 
 .c_typo_BLU03 {
-    color: #0068b7;
+    color: #0068B7;
 }
 
 .c_typo_BLU04 {
@@ -554,40 +554,101 @@
 }
 
 /* コンポーネント：Carousel */
-.c_carousel_contentsList {
+/* .c_carousel_cardListArea {
+    position: relative;
+}
+
+.c_carousel_cardList {
     display: flex;
-    align-items: center;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
 }
 
-.c_carousel_contentsList>li {
-    flex-shrink: 0;
-    width: 100%;
-    padding: 24px;
-    scroll-snap-align: center;
+.c_carousel_cardList>.c_carousel_active {
+    flex-basis: 40%;
 }
 
-.c_carousel_dotList {
+.c_carousel_cardList>li:has(+.c_carousel_active),
+.c_carousel_cardList>li.c_carousel_active+li {
+    flex-basis: 30%;
+    overflow: hidden;
+}
+
+@media (min-width: 760px) {
+    .c_carousel_cardList>.c_carousel_active {}
+
+    .c_carousel_cardList>li:has(+.c_carousel_active),
+    .c_carousel_cardList>li.c_carousel_active+li {
+        display: flex;
+    }
+
+    .c_carousel_cardList>li:has(+.c_carousel_active) {
+        justify-content: flex-end;
+        padding-right: 96px;
+    }
+
+    .c_carousel_cardList>li.c_carousel_active+li {
+        justify-content: flex-start;
+        padding-left: 96px;
+    }
+}
+
+.c_carousel_card {
     display: flex;
-    justify-content: center;
-    padding-top: 16px;
+    height: 100%;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-.c_carousel_dotList>li:not(:first-child) {
-    padding-left: 8px;
+.c_carousel_cardList .c_carousel_card>* {
+
 }
 
-.c_carousel_dot {
-    width: 8px;
-    height: 8px;
-    border: 1px solid #D9D9D9;
+.c_carousel_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background-color: #FFFFFF;
 }
 
-.c_carousel_selected>.c_carousel_dot {
+@media (min-width: 760px) {
+    .c_carousel_btn {
+        cursor: pointer;
+    }
+}
+
+.c_carousel_btn_left {
+    left: calc(30% - 72px);
+}
+
+.c_carousel_btn_right {
+    right: calc(30% - 72px);
+} */
+
+.c_carousel_dotArea>ul {
+    display: flex;
+    justify-content: center;
+}
+
+.c_carousel_dotArea li:not(:first-child) {
+    padding-left: 16px;
+}
+
+.c_carousel_dot {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #585858;
+    transition: all ease 0.4s;
+}
+
+.c_carousel_dot.c_carousel_active {
     background-color: #D9D9D9;
+    transition: all ease 0.4s;
 }
 
 /* コンポーネント：Notification */
@@ -609,15 +670,67 @@
 }
 
 /* コンポーネント：Dialog */
-.c_dialog_contents {
+.c_dialog_backGround {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    height: 100dvh;
-    /* background-color: rgba(0, 0, 0, 0.01); */
-    background-color: rgba(0, 0, 0, 0.8);
+    padding: 24px 20px;
+    background-color: rgba(38, 73, 157, 0.9);
+}
+
+.c_dialog_backGround[open] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c_dialog_contents {
+    position: relative;
+    width: 100%;
+    max-width: 592px;
+}
+
+.c_dialog_closeIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(16px, -16px);
+}
+
+.c_dialog_closeIcon>svg {
+    cursor: pointer;
+}
+
+.c_dialog_textArea {
+    max-height: calc(100vh - 48px * 2);
+    padding: 24px;
+    border-radius: 24px;
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+@media (min-width: 760px) {
+    .c_dialog_backGround {
+        padding: 48px 32px;
+    }
+
+    .c_dialog_closeIcon>svg>circle,
+    .c_dialog_closeIcon>svg>path {
+        transition: all 0.2s;
+    }
+
+    .c_dialog_closeIcon:hover>svg>circle {
+        fill: #BBDBF3;
+        transition: all 0.2s;
+    }
+
+    .c_dialog_closeIcon:hover>svg>path {
+        fill: #26499D;
+        transition: all 0.2s;
+    }
 }
 
 /* コンポーネント：Notes */

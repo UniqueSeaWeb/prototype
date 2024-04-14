@@ -1,8 +1,43 @@
 /* サンプル（Dialog） */
-section {
-    padding: 0 20px;
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: 100dvh;
 }
 
-section:not(:first-child) {
-    padding-top: 24px;
+main {
+    flex-grow: 1;
+}
+
+.sp_dialogSec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 20px 0;
+}
+
+.sp_dialogSec:not(:last-child) {
+    padding-bottom: 24px;
+}
+
+@media (min-width: 760px) {
+    .sp_dialogSec {
+        padding: 48px 32px 0;
+    }
+    
+    .sp_dialogSec:not(:last-child) {
+        padding-bottom: 48px;
+    }
+}
+
+.sp_btnWidth {
+    width: 280px;
+}
+
+.sp_closeBtn_circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #26499D;
 }

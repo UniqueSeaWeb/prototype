@@ -14,31 +14,93 @@
 
 <body>
     <main>
-        <section>
-            <!-- c_carousel -->
-            <div class="c_carousel">
-                <ul class="c_carousel_contentsList">
-                    <li class="c_carousel_selected">
-                        <img src="../sample_files/sample_image/sample.png" class="pt_crs_sampleImg">
-                    </li>
-                    <li>
-                        <img src="../sample_files/sample_image/sample.png" class="pt_crs_sampleImg">
-                    </li>
-                    <li>
-                        <img src="../sample_files/sample_image/sample.png" class="pt_crs_sampleImg">
-                    </li>
-                </ul>
-                <ul class="c_carousel_dotList">
-                    <li class="c_carousel_selected">
-                        <div class="c_carousel_dot"></div>
-                    </li>
-                    <li>
-                        <div class="c_carousel_dot"></div>
-                    </li>
-                    <li>
-                        <div class="c_carousel_dot"></div>
-                    </li>
-                </ul>
+        <!-- カルーセルセクション -->
+        <section class="sp_carouselSec" style="display: none;">
+            <div class="sp_carouselSecInner">
+
+                <!-- c_carousel -->
+                <div class="c_carousel">
+                    <div class="c_carousel_cardListArea">
+                        <ul class="c_carousel_cardList">
+                            <li>
+                                <div class="c_carousel_card">
+                                    <div class="sp_content1">サンプルコンテンツ1</div>
+                                </div>
+                            </li>
+                            <li class="c_carousel_active">
+                                <div class="c_carousel_card">
+                                    <div class="sp_content2">サンプルコンテンツ2</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="c_carousel_card">
+                                    <div class="sp_content3">サンプルコンテンツ3</div>
+                                </div>
+                            </li>
+                        </ul>
+                        <a class="c_carousel_btn c_carousel_btn_left"></a>
+                        <a class="c_carousel_btn c_carousel_btn_right"></a>
+                    </div>
+                    <div class="c_carousel_dotListArea">
+                        <ul class="c_carousel_dotList">
+                            <li>
+                                <div class="c_carousel_dot"></div>
+                            </li>
+                            <li>
+                                <div class="c_carousel_dot"></div>
+                            </li>
+                            <li>
+                                <div class="c_carousel_dot"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- カルーセルセクション -->
+        <section class="sp_carouselSec">
+            <div class="sp_carouselSecInner">
+
+                <!-- c_carousel -->
+                <div class="c_carousel">
+                    <div class="c_carousel_cardArea">
+                        <ul>
+                            <li class="c_caroucel_active">
+                                <div class="c_caroucel_card"></div>
+                            </li>
+                            <li>
+                                <div class="c_caroucel_card"></div>
+                            </li>
+                            <li>
+                                <div class="c_caroucel_card"></div>
+                            </li>
+                            <li>
+                                <div class="c_caroucel_card"></div>
+                            </li>
+                        </ul>
+                        <div class="c_carousel_btn c_carousel_btn_left"></div>
+                        <div class="c_carousel_btn c_carousel_btn_left"></div>
+                    </div>
+                    <div class="c_carousel_dotArea">
+                        <ul>
+                            <li>
+                                <a class="c_carousel_dot c_carousel_active"></a>
+                            </li>
+                            <li>
+                                <a class="c_carousel_dot"></a>
+                            </li>
+                            <li>
+                                <a class="c_carousel_dot"></a>
+                            </li>
+                            <li>
+                                <a class="c_carousel_dot"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
