@@ -317,39 +317,7 @@
 /* コンポーネント：TextField01 */
 .c_textField01 {
     position: relative;
-    width: 100%;
     padding-top: 28px;
-}
-
-.c_textField01>p {
-    position: absolute;
-    top: 44px;
-    left: 16px;
-    width: calc(100% - 16px * 2);
-    pointer-events: none;
-    transition: all ease 0.4s;
-}
-
-.c_textField01:has(input:focus)>p {
-    top: 0;
-    left: 0;
-    width: 100%;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 700;
-    color: #2E2E2E;
-    transition: all ease 0.4s;
-}
-
-.c_textField01:has(input:not(:placeholder-shown))>p {
-    top: 0;
-    left: 0;
-    width: 100%;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 700;
-    color: #2E2E2E;
-    transition: all ease 0.4s;
 }
 
 .c_textField01>input {
@@ -366,6 +334,34 @@
     font-weight: 400;
     line-height: 24px;
     color: #2E2E2E;
+}
+
+.c_textField01>p {
+    position: absolute;
+    top: 44px;
+    left: 16px;
+    pointer-events: none;
+    transition: all ease 0.4s;
+}
+
+.c_textField01>input:focus+p {
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #2E2E2E;
+    transition: all ease 0.4s;
+}
+
+.c_textField01>input:not(:placeholder-shown)+p {
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #2E2E2E;
+    transition: all ease 0.4s;
 }
 
 @media (min-width: 760px) {
@@ -390,6 +386,59 @@
 
 @media (min-width: 760px) {
     .c_textField02:focus {
+        border: 1px solid #00AFCC;
+    }
+}
+
+/* コンポーネント：TextField03 */
+.c_textField03 {
+    position: relative;
+}
+
+.c_textField03>input {
+    width: 100%;
+    padding: 20px 16px 12px 16px;
+    border: 1px solid #EAF6FF;
+    border-radius: 16px;
+    background-color: #EAF6FF;
+    outline: none;
+}
+
+.c_textField03_inputText {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #2E2E2E;
+}
+
+.c_textField03>p {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    pointer-events: none;
+    transition: all ease 0.4s;
+}
+
+.c_textField03>input:focus+p {
+    top: 0;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+    color: #2E2E2E;
+    transition: all ease 0.4s;
+}
+
+.c_textField03>input:not(:placeholder-shown)+p {
+    top: 0;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+    color: #2E2E2E;
+    transition: all ease 0.4s;
+}
+
+@media (min-width: 760px) {
+    .c_textField03>input:focus {
         border: 1px solid #00AFCC;
     }
 }
