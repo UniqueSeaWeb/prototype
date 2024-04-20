@@ -9,18 +9,18 @@ if (document.getElementById('c_counter_time')) {
     // }, 1000);
 }
 
-/* コンポーネント：button */
+/* コンポーネント：button01 */
 window.addEventListener('DOMContentLoaded', function () {
-    if (document.getElementsByClassName('c_button')) {
+    if (document.getElementsByClassName('c_button01')) {
         // ボタンが非活性の場合、タブ操作を無効化
-        const btn = document.getElementsByClassName('c_button');
+        const btn = document.getElementsByClassName('c_button01');
         for (let i = 0; i < btn.length; i++) {
-            if (btn[i].classList.contains('c_button_disabled')) {
+            if (btn[i].classList.contains('c_button01_disabled')) {
                 btn[i].tabIndex = -1;
             }
 
             // フォーカス状態でEnter押下時
-            btn.addEventListener('keydown', function(e) {
+            btn[i].addEventListener('keydown', function(e) {
                 if (e.key === 'Enter') {
                     this.click();
                 }

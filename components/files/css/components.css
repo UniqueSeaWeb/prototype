@@ -444,7 +444,7 @@
 }
 
 /* コンポーネント：button */
-.c_button {
+.c_button01 {
     display: block;
     width: 100%;
     padding: 13px 0;
@@ -456,12 +456,12 @@
 }
 
 @media (min-width: 760px) {
-    .c_button:focus {
+    .c_button01:focus {
         border: 3px solid #00AFCC;
         transition: all 0.2s;
     }
 
-    .c_button:hover {
+    .c_button01:hover {
         border: 3px solid #0068b7;
         border-radius: 29px;
         background-color: #EAF6FF;
@@ -469,19 +469,19 @@
         transition: all 0.2s;
     }
 
-    .c_button:hover>p {
+    .c_button01:hover>p {
         color: #0068b7;
         transition: all 0.2s;
     }
 }
 
-.c_button_disabled {
+.c_button01_disabled {
     border-color: #D9D9D9;
     background-color: #D9D9D9;
     pointer-events: none;
 }
 
-.c_button_disabled>p {
+.c_button01_disabled>p {
     color: #585858;
 }
 
