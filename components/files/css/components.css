@@ -327,7 +327,18 @@
     left: 16px;
     width: calc(100% - 16px * 2);
     pointer-events: none;
-    transition: all ease 0.6s;
+    transition: all ease 0.4s;
+}
+
+.c_textField01:has(input:focus)>p {
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #2E2E2E;
+    transition: all ease 0.4s;
 }
 
 .c_textField01:has(input:not(:placeholder-shown))>p {
@@ -338,7 +349,7 @@
     line-height: 20px;
     font-weight: 700;
     color: #2E2E2E;
-    transition: all ease 0.6s;
+    transition: all ease 0.4s;
 }
 
 .c_textField01>input {
@@ -358,23 +369,12 @@
 }
 
 @media (min-width: 760px) {
-    .c_textField01:has(input:focus)>p {
-        top: 0;
-        left: 0;
-        width: 100%;
-        font-size: 14px;
-        line-height: 20px;
-        font-weight: 700;
-        color: #2E2E2E;
-        transition: all ease 0.6s;
-    }
-
     .c_textField01>input:focus {
         border: 1px solid #00AFCC;
     }
 }
 
-/* コンポーネント：TextField01 */
+/* コンポーネント：TextField02 */
 .c_textField02 {
     width: 100%;
     padding: 16px;
