@@ -18,6 +18,13 @@ window.addEventListener('DOMContentLoaded', function () {
             if (btn[i].classList.contains('c_button_disabled')) {
                 btn[i].tabIndex = -1;
             }
+
+            // フォーカス状態でEnter押下時
+            btn.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    this.click();
+                }
+            });
         }
     }
 });
