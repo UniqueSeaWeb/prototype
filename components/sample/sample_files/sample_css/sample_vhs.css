@@ -1,0 +1,44 @@
+/* サンプル（vhs） */
+.sp_linkSec {
+    padding: 0 20px;
+}
+
+.sp_linkSec>ul>li:not(:first-child) {
+    padding-top: 24px;
+}
+
+.sp_body {
+    display: flex;
+    flex-direction: column;
+}
+
+.sp_body_vh {
+    height: 100vh;
+}
+
+.sp_body_svh {
+    height: 100vh;
+}
+
+.sp_body_lvh {
+    height: 100vh;
+}
+
+.sp_body_dvh {
+    height: 100vh;
+}
+
+.sp_header {
+    background-color: red;
+}
+
+.sp_main {
+    flex-grow: 1;
+    background-color: orange;
+    overflow-y: auto;
+}
+
+.sp_footer {
+    height: 48px;
+    background-color: yellow;
+}
