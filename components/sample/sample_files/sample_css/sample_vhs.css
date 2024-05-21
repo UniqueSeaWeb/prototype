@@ -17,15 +17,15 @@
 }
 
 .sp_body_svh {
-    height: 100vh;
+    height: 100svh;
 }
 
 .sp_body_lvh {
-    height: 100vh;
+    height: 100lvh;
 }
 
 .sp_body_dvh {
-    height: 100vh;
+    height: 100dvh;
 }
 
 .sp_header {
