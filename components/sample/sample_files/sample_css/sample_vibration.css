@@ -1,0 +1,11 @@
+/* サンプル（Vibration） */
+main {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 20px;
+}
+
+.sp_btnWrapper {
+    width: 280px;
+}
