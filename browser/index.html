@@ -84,10 +84,10 @@
 
                 if (userAgent.indexOf('msie') > -1 || userAgent.indexOf('trident') > -1) {
                     browserName = 'IE';
+                } else if (userAgent.indexOf('i-filter') > -1) {
+                    browserName = 'i-FILTER';
                 } else if (userAgent.indexOf('edge') > -1 || userAgent.indexOf('edg') > -1) {
                     browserName = 'Edge';
-                } else if (userAgent.indexOf('i-filter') > -1) {
-                    browserName = 'i-FILTER・・・？';
                 } else if (userAgent.indexOf('chrome') > -1) {
                     browserName = 'Chrome';
                 } else if (userAgent.indexOf('crios') > -1) {
@@ -99,11 +99,11 @@
                 } else if (userAgent.indexOf('opera') > -1) {
                     browserName = 'Opera';
                 } else {
-                    browserName = 'IE、Edge、Chrome、Safari、Firefox、Opera以外のブラウザです。';
+                    browserName = 'IE、Edge、Chrome、Safari、Firefox、Opera、i-FILTER以外のブラウザです。';
                 }
             } catch (e) {
                 userAgent = 'ユーザーエージェントの取得に失敗しました。\n' + e.message;
-                browserName = 'ブラウザの取得に失敗しました。';
+                browserName = 'ブラウザ名の取得に失敗しました。';
             } finally {
                 userAgentInfoElm.innerText = userAgent;
                 browserNameElm.innerText = browserName;
