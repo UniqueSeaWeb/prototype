@@ -24,6 +24,10 @@
             padding-top: 16px;
         }
 
+        .pt_browserInfo {
+            padding-top: 24px;
+        }
+
         @media (min-width: 760px) {
             header {
                 padding: 64px 32px 32px;
@@ -54,12 +58,16 @@
             <div class="pt_browserName">
                 <p class="c_typo_headerL c_typo_BLK01"><span id="pt_browserName">？？？？</span></p>
             </div>
+            <div class="pt_browserInfo">
+                <p class="c_typo_bodyXS c_typo_BLK01"><span id="pt_browserInfo">？？？？</span></p>
+            </div>
         </section>
     </main>
 
     <script>
         window.addEventListener('DOMContentLoaded', function () {
             const browserNameElm = document.getElementById('pt_browserName');
+            const browserInfoElm = document.getElementById('pt_browserInfo');
             let userAgent = '';
             let browserName = '';
 
@@ -85,6 +93,7 @@
                 browserName = 'ブラウザの取得に失敗しました。\n' + e.message;
             } finally {
                 browserNameElm.innerText = browserName;
+                browserInfoElm.innerText = userAgent;
             }
         });
     </script>
