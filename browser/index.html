@@ -60,12 +60,29 @@
     <script>
         window.addEventListener('DOMContentLoaded', function () {
             const browserNameElm = document.getElementById('pt_browserName');
+            let userAgent = '';
             let browserName = '';
 
             try {
-                browserName = window.navigator.userAgent;
+                userAgent = window.navigator.userAgent.toLowerCase();
+                
+                if (userAgent.indexOf('msie') > -1 || userAgent.indexOf('trident') > -1) {
+                    browserName = 'IE';
+                } else if (userAgent.indexOf('edge') > -1 || userAgent.indexOf('edg') > -1) {
+                    browserName = 'Edge';
+                } else if (userAgent.indexOf('chrome') > -1) {
+                    browserName = 'Chrome';
+                } else if (userAgent.indexOf('safari') > -1) {
+                    browserName = 'Safari';
+                } else if (userAgent.indexOf('firefox') > -1) {
+                    browserName = 'Firefox';
+                } else if (userAgent.indexOf('opera') > -1) {
+                    browserName = 'Opera';
+                } else {
+                    browserName = 'IE、Edge、Chrome、Safari、Firefox、Opera以外のブラウザです。\n' + userAgent;
+                }
             } catch (e) {
-                browserName = '分かりませんでした・・・\n' + e.message;
+                browserName = 'ブラウザの取得に失敗しました。\n' + e.message;
             } finally {
                 browserNameElm.innerText = browserName;
             }
