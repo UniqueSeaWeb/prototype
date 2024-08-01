@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="../components/files/css/reset.css">
     <link rel="stylesheet" href="../components/files/css/components.css">
     <style>
+        body {
+            background-color: #F2FAF9;
+        }
+
         header {
-            padding: 16px 20px;
+            padding: 16px 20px 24px;
         }
 
         main {
@@ -20,12 +24,18 @@
             padding: 0 20px;
         }
 
-        .pt_browserName {
-            padding-top: 16px;
+        .pt_userAgentInfo {
+            padding: 16px;
+            border-radius: 16px;
+            background-color: #FFF9E5;
         }
 
-        .pt_browserInfo {
+        .pt_expText {
             padding-top: 24px;
+        }
+
+        .pt_browserName {
+            padding-top: 8px;
         }
 
         @media (min-width: 760px) {
@@ -39,10 +49,6 @@
                 margin: 0 auto;
                 padding: 0;
             }
-
-            .pt_browserName {
-                padding-top: 24px;
-            }
         }
     </style>
 </head>
@@ -54,26 +60,28 @@
 
     <main>
         <section class="pt_sec01">
-            <p class="c_typo_bodyL c_typo_BLK01">あなたが使用しているブラウザは</p>
+            <div class="pt_userAgentInfo">
+                <p class="c_typo_bodyXS c_typo_BLK01"><span id="pt_userAgentInfo">？？？？</span></p>
+            </div>
+            <div class="pt_expText">
+                <p class="c_typo_bodyL c_typo_BLK01">あなたが使用しているブラウザは</p>
+            </div>
             <div class="pt_browserName">
                 <p class="c_typo_headerL c_typo_BLK01"><span id="pt_browserName">？？？？</span></p>
-            </div>
-            <div class="pt_browserInfo">
-                <p class="c_typo_bodyXS c_typo_BLK01"><span id="pt_browserInfo">？？？？</span></p>
             </div>
         </section>
     </main>
 
     <script>
         window.addEventListener('DOMContentLoaded', function () {
+            const userAgentInfoElm = document.getElementById('pt_userAgentInfo');
             const browserNameElm = document.getElementById('pt_browserName');
-            const browserInfoElm = document.getElementById('pt_browserInfo');
             let userAgent = '';
             let browserName = '';
 
             try {
                 userAgent = window.navigator.userAgent.toLowerCase();
-                
+
                 if (userAgent.indexOf('msie') > -1 || userAgent.indexOf('trident') > -1) {
                     browserName = 'IE';
                 } else if (userAgent.indexOf('edge') > -1 || userAgent.indexOf('edg') > -1) {
@@ -89,13 +97,14 @@
                 } else if (userAgent.indexOf('opera') > -1) {
                     browserName = 'Opera';
                 } else {
-                    browserName = 'IE、Edge、Chrome、Safari、Firefox、Opera以外のブラウザです。\n' + userAgent;
+                    browserName = 'IE、Edge、Chrome、Safari、Firefox、Opera以外のブラウザです。';
                 }
             } catch (e) {
-                browserName = 'ブラウザの取得に失敗しました。\n' + e.message;
+                userAgent = 'ユーザーエージェントの取得に失敗しました。\n' + e.message;
+                browserName = 'ブラウザの取得に失敗しました。';
             } finally {
+                userAgentInfoElm.innerText = userAgent;
                 browserNameElm.innerText = browserName;
-                browserInfoElm.innerText = userAgent;
             }
         });
     </script>
