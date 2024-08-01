@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
+    <title>ブラウザ確認</title>
+    <link rel="stylesheet" href="../components/files/css/reset.css">
+    <link rel="stylesheet" href="../components/files/css/components.css">
+    <style>
+        header {
+            padding: 16px 20px;
+        }
+
+        main {
+            padding-top: 24px 0 0;
+        }
+
+        .pt_sec01 {
+            padding: 0 20px;
+        }
+
+        .pt_browserName {
+            padding-top: 16px;
+        }
+
+        @media (min-width: 760px) {
+            header {
+                padding: 64px 32px 32px;
+            }
+
+            .pt_sec01 {
+                width: 100%;
+                max-width: 592px;
+                margin: 0 auto;
+                padding: 0;
+            }
+
+            .pt_browserName {
+                padding-top: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <p class="c_typo_headerXL c_typo_BLK01 c_typo_center">ブラウザ確認</p>
+    </header>
+
+    <main>
+        <section class="pt_sec01">
+            <p class="c_typo_bodyL c_typo_BLK01">あなたが使用しているブラウザは</p>
+            <div class="pt_browserName">
+                <p class="c_typo_headerL c_typo_BLK01"><span id="pt_browserName">？？？？</span></p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            const browserNameElm = document.getElementById('pt_browserName');
+            let browserName = '';
+
+            try {
+                browserName = window.navigator.userAgent;
+            } catch (e) {
+                browserName = '分かりませんでした・・・\n' + e.message;
+            } finally {
+                browserNameElm.innerText = browserName;
+            }
+        });
+    </script>
+</body>
+
+</html>
