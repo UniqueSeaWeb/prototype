@@ -15,7 +15,7 @@
 <body>
     <main>
         <section class="pt_uploadSec">
-            <form class="c_upload">
+            <form method="post" name="pt_form" class="c_upload" enctype="multipart/form-data">
                 <p class="c_typo_headerM c_typo_BLK01">ファイルアップロード</p>
                 <div class="c_upload_lead">
                     <p class="c_typo_bodyM c_typo_BLK01">クリックかドラッグ&ドロップでアップロードしてください</p>
@@ -52,7 +52,7 @@
                         </a>
                     </div>
                     <div class="c_upload_btn">
-                        <a href="javascript:void(0);" tabindex="0" class="c_button03 c_button03_blue c_upload_saveBtn">
+                        <a href="javascript:pt_form.submit();" tabindex="0" class="c_button03 c_button03_blue c_upload_saveBtn">
                             <p class="c_typo_headerXS c_typo_WHT c_typo_center">保存</p>
                         </a>
                     </div>
