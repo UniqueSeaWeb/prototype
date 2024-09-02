@@ -212,8 +212,11 @@
 
 /* コンポーネント：card */
 .c_card {
-    display: block;
-    width: 164px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 200px;
     padding: 16px;
     border: 1px solid #D9D9D9;
     border-radius: 16px;
@@ -222,9 +225,7 @@
 }
 
 .c_card_img {
-    display: flex;
-    align-items: flex-start;
-    height: 120px;
+    flex-grow: 1;
     overflow: hidden;
 }
 
@@ -234,7 +235,7 @@
 
 @media (min-width: 760px) {
     .c_card {
-        width: 224px;
+        height: 280px;
         padding: 24px;
         border-radius: 24px;
     }
@@ -242,10 +243,6 @@
     .c_card:hover {
         transform: scale(1.04);
         transition: all ease-in 0.2s;
-    }
-
-    .c_card_img {
-        height: 160px;
     }
 }
 
@@ -503,6 +500,54 @@
     text-align: center;
 }
 
+/* コンポーネント：button03 */
+.c_button03 {
+    display: block;
+    width: 100%;
+    padding: 6px 0;
+    border: 2px solid #0068b7;
+    border-radius: 28px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.c_button03_blue {
+    background-color: #0068b7;
+}
+
+.c_button03_white {
+    background-color: #FFFFFF;
+}
+
+@media (min-width: 760px) {
+    .c_button03:focus {
+        border: 2px solid #00AFCC;
+        transition: all 0.2s;
+    }
+
+    .c_button03:hover {
+        border: 2px solid #0068b7;
+        border-radius: 29px;
+        background-color: #EAF6FF;
+        cursor: pointer;
+        transition: all 0.2s;
+    }
+
+    .c_button03:hover>p {
+        color: #0068b7;
+        transition: all 0.2s;
+    }
+}
+
+.c_button03_disabled {
+    border-color: #D9D9D9;
+    background-color: #D9D9D9;
+    pointer-events: none;
+}
+
+.c_button03_disabled>p {
+    color: #585858;
+}
 /* コンポーネント：Navigation */
 .c_nav {
     position: fixed;
@@ -725,6 +770,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     padding: 24px 20px;
     background-color: rgba(38, 73, 157, 0.9);
 }
@@ -791,4 +837,88 @@
 .c_notes_right {
     flex-grow: 1;
     padding-left: 4px;
+}
+
+/* コンポーネント：Upload */
+.c_upload {
+    display: block;
+    width: 100%;
+    border-radius: 24px;
+    background-color: #FFFFFF;
+}
+
+.c_upload_lead {
+    padding-top: 8px;
+}
+
+.c_upload_fileWarpper {
+    padding-top: 24px;
+}
+
+.c_upload_file {
+    display: none;
+}
+
+.c_upload_file+label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 360px;
+    border: 3px dashed #D9D9D9;
+    border-radius: 24px;
+    transition: all 0.3s ease;
+}
+
+.c_upload_file+label>svg {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+}
+
+.c_upload_file+label p {
+    transition: all 0.3s ease;
+}
+
+.c_upload_fileLimit {
+    display: flex;
+    padding-top: 8px;
+}
+
+.c_upload_fileLimit>p:first-child {
+    flex-grow: 1;
+}
+
+.c_upload_fileLimit>p:last-child {
+    margin-left: 16px;
+}
+
+.c_upload_btnArea {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 24px;
+}
+
+.c_upload_btn {
+    width: 120px;
+    padding-left: 16px;
+}
+
+@media (min-width: 760px) {
+    .c_upload_file+label:hover {
+        border: 3px dashed #585858;
+        background-color: #F3FAFF;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .c_upload_file+label:hover p {
+        color: #585858;
+        transition: all 0.3s ease;
+    }
+
+    .c_upload_btn {
+        width: 160px;
+        padding-left: 24px;
+    }
 }

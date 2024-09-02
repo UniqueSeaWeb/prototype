@@ -178,3 +178,31 @@ function easeInOutCubic(t, b, c, d) {
     t -= 2;
     return c / 2 * (t * t * t + 2) + b;
 }
+
+/* コンポーネント：Upload */
+if (document.getElementsByClassName('c_upload')) {
+    const upload = document.getElementsByClassName('c_upload_file');
+
+    for (let i = 0; i < upload.length; i++) {
+        const uploadFile = document.getElementsByClassName('c_upload_file')[i];
+        const cancelBtn = document.getElementsByClassName('c_upload_cancelBtn')[i];
+
+        uploadFile.addEventListener('change', function () {
+            if (this.value) {
+                const file = this.files[0];
+                const fileInfo = document.getElementsByClassName('c_upload_fileInfo')[i];
+                fileInfo.firstElementChild.innerText = file.name + '\n' + file.size + 'Bytes';
+            }
+        });
+
+        cancelBtn.addEventListener('click', function () {
+            console.log('キャンセルボタン');
+            const uploadFile = document.getElementsByClassName('c_upload_file')[i];
+            if (uploadFile.value) {
+                const fileInfo = document.getElementsByClassName('c_upload_fileInfo')[i];
+                fileInfo.firstElementChild.innerText = 'ファイル未選択';
+                uploadFile.value = '';
+            }
+        });
+    }
+}

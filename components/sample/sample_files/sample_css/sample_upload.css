@@ -1,0 +1,12 @@
+/* サンプル（Upload） */
+.pt_uploadSec {
+    padding: 0 20px;
+}
+
+@media (min-width: 760px) {
+    .pt_uploadSec {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
